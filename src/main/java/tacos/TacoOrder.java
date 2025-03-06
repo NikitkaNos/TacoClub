@@ -1,21 +1,16 @@
 package tacos;
 
-import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
-import java.util.ArrayList;
+import jakarta.persistence.*;
+import lombok.Data;
+import org.hibernate.validator.constraints.CreditCardNumber;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
-
-
-import jakarta.persistence.*;
-import org.hibernate.validator.constraints.CreditCardNumber;
-/*import org.springframework.data.relational.core.mapping.Column;
-import org.springframework.data.relational.core.mapping.Table;*/
-
-import lombok.Data;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @Data
 @Entity

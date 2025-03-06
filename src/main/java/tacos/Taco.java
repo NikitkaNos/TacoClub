@@ -1,19 +1,18 @@
 package tacos;
 
+import jakarta.persistence.*;
+import lombok.Data;
+import org.springframework.data.rest.core.annotation.RestResource;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
-import jakarta.persistence.*;
-/*import org.springframework.data.relational.core.mapping.Table;*/
-
-import lombok.Data;
-
 @Data
 @Entity
+@RestResource(rel = "tacos",path = "tacos")
 public class Taco {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
