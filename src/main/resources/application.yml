@@ -1,4 +1,7 @@
 spring:
+  data:
+    rest:
+      base-path: /data-api
   datasource:
     url: jdbc:h2:mem:testDB
     driver-class-name: org.h2.Driver
@@ -11,3 +14,9 @@ spring:
       console:
         enabled: true
         path: /h2-console
+management:
+    endpoints:
+      web:
+        base-path: /management
+        exposure:
+          include: '*'
